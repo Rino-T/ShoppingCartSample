@@ -35,7 +35,7 @@ docker exec -i shopping-cart-service_postgres-db_1 psql -U shopping-cart -t < dd
 
 ```shell
 # aws ecr login
-aws ecr get-login-password --region ap-northeast-1 | docker login --usernameAWS --password-stdin <aws account id>.dkr.ecr.ap-northeast-1.amazonaws.com
+aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin <aws account id>.dkr.ecr.ap-northeast-1.amazonaws.com
 # docker publish to aws ecr
 sbt -Ddocker.registry=<aws account id>.dkr.ecr.ap-northeast-1.amazonaws.com docker:publish
 ```
